@@ -7,11 +7,16 @@ import {addPinCode,checkPinCode,deletePinCode} from "./PinCodeSlice/PinCode.ts";
 const App = () => {
     const dispatch = useDispatch();
     const pinCode = useSelector((state: RootState) => state.pinCode.input);
+    const changeColor = useSelector((state:RootState) => state.pinCode.condition)
+    console.log(changeColor)
 
     return (
         <div className="container">
-            <div className="block-display">
-                <h1 className={`${pinCode === '1337' ? "green" : "red"}`}>{pinCode}</h1>
+            <div className="mini-block">{changeColor}</div>
+            <div className={`block-display ${changeColor === "Access Granted" ? "green" : changeColor === "Access Denied" ? "error" : "white"}`}>
+                {pinCode.split('').map((onePin,index) => (
+                        <p key={index}>*</p>
+                ))}
             </div>
             <div className="block-number">
                 <div className="block-3">

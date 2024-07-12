@@ -17,16 +17,26 @@
   background:darkviolet;
 }
 
-.green{
+.mini-block{
+  padding-top:5px;
+}
+
+.block-display{
+  display: flex;
+  justify-content: center;
   border: 1px solid black;
-  padding: 10px;
+}
+
+.green{
   background: green;
 
 }
 
-.red {
-  border: 1px solid black;
-  padding: 10px;
+.white{
+  background: white;
+}
+
+.error {
   background: red;
 }
 

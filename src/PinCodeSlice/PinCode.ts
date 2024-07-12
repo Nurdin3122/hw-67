@@ -3,11 +3,13 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 interface PinCodeState {
     input: string;
     correctPin: string;
+    condition:string;
 }
 
 const initialState: PinCodeState = {
     input: '',
     correctPin: '1337',
+    condition:''
 };
 
 
@@ -23,9 +25,9 @@ export const PinCodeSlice = createSlice({
         },
         checkPinCode: (state,action) => {
             if(state.input === state.correctPin) {
-                console.log('Access Granted');
+               state.condition = 'Access Granted';
             } else {
-                console.log('Access Denied ');
+                state.condition = 'Access Denied';
             }
         },
         deletePinCode:(state,action) => {
