@@ -2,7 +2,7 @@
 import './App.css'
 import {useDispatch,useSelector} from "react-redux";
 import {RootState} from "./app/store.ts";
-import {addPinCode,checkPinCode} from "./PinCodeSlice/PinCode.ts";
+import {addPinCode,checkPinCode,deletePinCode} from "./PinCodeSlice/PinCode.ts";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -31,7 +31,7 @@ const App = () => {
                     <button type="button" className="btn" onClick={() => (dispatch(addPinCode('3')))}>3</button>
                 </div>
                 <div className="block-0">
-                    <button type="button" className="btn" onClick={() => (dispatch(addPinCode('-')))}> -</button>
+                    <button type="button" className="btn" onClick={() => (dispatch(deletePinCode()))}> -</button>
                     <button type="button" className="btn" onClick={() => (dispatch(addPinCode('0')))}>0</button>
                     <button type="button" className="btn" onClick={() => (dispatch(checkPinCode()))}>E</button>
                 </div>

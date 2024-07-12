@@ -27,8 +27,11 @@ export const PinCodeSlice = createSlice({
             } else {
                 console.log('Access Denied ');
             }
+        },
+        deletePinCode:(state,action) => {
+            state.input = state.input.slice(0,-1);
         }
     }
 });
 export const PinCodeReducer = PinCodeSlice.reducer;
-export const {addPinCode,checkPinCode} = PinCodeSlice.actions;
+export const {addPinCode,checkPinCode,deletePinCode} = PinCodeSlice.actions;
