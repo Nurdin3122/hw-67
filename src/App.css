@@ -5,3 +5,26 @@
   text-align: center;
 }
 
+.container{
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 10px;
+  background:darkviolet;
+}
+
+.display {
+  border: 1px solid black;
+  padding: 10px;
+  background: white;
+}
+
+.btn{
+  padding: 14px;
+  margin: 5px;
+}
+
