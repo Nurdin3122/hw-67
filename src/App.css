@@ -17,10 +17,17 @@
   background:darkviolet;
 }
 
-.display {
+.green{
   border: 1px solid black;
   padding: 10px;
-  background: white;
+  background: green;
+
+}
+
+.red {
+  border: 1px solid black;
+  padding: 10px;
+  background: red;
 }
 
 .btn{

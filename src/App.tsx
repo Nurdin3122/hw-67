@@ -11,7 +11,7 @@ const App = () => {
     return (
         <div className="container">
             <div className="block-display">
-                <h1 className="display">{pinCode}</h1>
+                <h1 className={`${pinCode === '1337' ? "green" : "red"}`}>{pinCode}</h1>
             </div>
             <div className="block-number">
                 <div className="block-3">
